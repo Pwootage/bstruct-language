@@ -1,6 +1,6 @@
 {
   "name": "language-bstruct",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Syntax hilighting for the bstruct definition language",
   "keywords": [
     "language",
