@@ -1,15 +1,24 @@
-big endian struct CPlayer {
-  float posX;
-  float posY 0x16;
+big endian struct Example1 {
+  int32 anInt;
+  float positionedFloat 0x16;
+  float[3] arrayOfFloats 32;
 }
 
-//comment
+//This is a comment
 
 little endian struct Test1 {
-  // Test
-  float[6] bb 0x12;
+  float[6] bb;
 }
 
 struct Test2 extends Test1 {
 
+}
+
+struct Cat {
+}
+
+struct Dog {
+}
+
+struct CatDog extends Cat, Dog {
 }
