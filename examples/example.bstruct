@@ -1,0 +1,15 @@
+big endian struct CPlayer {
+  float posX;
+  float posY 0x16;
+}
+
+//comment
+
+little endian struct Test1 {
+  // Test
+  float[6] bb 0x12;
+}
+
+struct Test2 extends Test1 {
+
+}
