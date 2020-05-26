@@ -5,6 +5,7 @@
     "version": "1.0.0",
     "author": "Pwootage<pwootage@gmail.com>",
     "publisher": "pwootage",
+    "repository": "https://github.com/Pwootage/bstruct-language",
     "engines": {
         "vscode": "^1.45.0"
     },
