@@ -1,0 +1,27 @@
+{
+    "name": "bstruct-language",
+    "displayName": "bstruct-language",
+    "description": "bstruct language support",
+    "version": "1.0.0",
+    "author": "Pwootage<pwootage@gmail.com>",
+    "publisher": "pwootage",
+    "engines": {
+        "vscode": "^1.45.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "bstruct",
+            "aliases": ["bstruct", "bstruct"],
+            "extensions": [".bs"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "bstruct",
+            "scopeName": "source.bstruct",
+            "path": "./syntaxes/bstruct.tmLanguage.json"
+        }]
+    }
+}

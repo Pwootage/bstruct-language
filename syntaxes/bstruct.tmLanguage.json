@@ -1,0 +1,52 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "bstruct",
+	"patterns": [
+		{"include": "#comments"},
+		{"include": "#bstruct_def"},
+		{"include": "#hex_number"},
+		{"include": "#dec_number"},
+		{"include": "#bstruct_def"}
+	],
+	"repository": {
+		"comments": {
+			"match": "//.*$",
+			"name": "comment.line.double-slash"
+		},
+		"bstruct_def": {
+			"name": "meta.definition.type.struct",
+			"begin": "(struct|enum)",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.other"
+				},
+				"2": {
+					"name": "entity.name.type"
+				}
+			},
+			"end": "{",
+			"patterns": [
+				{"include": "#bstruct_type"}
+			]
+		},
+		"hex_number": {
+			"match": "0x[0-9a-fA-F]+",
+			"name": "constant.numeric"
+		},
+		"binary_number": {
+			"match": "0b[01]+",
+			"name": "constant.numeric"
+		},
+		"dec_number": {
+			"match": "\\b((?:0)|(?:[1-9][0-9]*))",
+			"captures": {
+				"1": { "name": "constant.numeric" }
+			}
+		},
+		"bstruct_type": {
+			"match": "((?:[a-zA-Z][a-zA-Z0-9]*)(?:::[a-zA-Z0-9]+)*)",
+			"name": "entity.name.type"
+		}
+	},
+	"scopeName": "source.bstruct"
+}
